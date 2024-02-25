@@ -23,8 +23,13 @@ export default function Home() {
       </p>
       <p>Dans prisma/schema ➡️  on fait nos models de bases</p>
       <p>On push avec : <br />
-      npx prisma db push <br />
+      npx prisma generate puis npx prisma db push <br />
+      ou <br />
       npx prisma migrate dev --name init</p>
+      <p>On récupère les données dans des route.js</p>
+      <p>Installation react Query : <br />
+      npm i react-query
+      </p>
     </div>
   );
 }

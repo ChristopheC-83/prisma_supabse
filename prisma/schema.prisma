@@ -27,9 +27,9 @@ model Post {
   // category
 }
 
-model rpgCharacters {
+model persos {
   id           String  @id @default(uuid())
-  name         String
+  name         String  @unique
   surname      String?
   image        String?
   biopic       String?
