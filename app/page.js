@@ -22,7 +22,9 @@ export default function Home() {
       
       </p>
       <p>Dans prisma/schema ➡️  on fait nos models de bases</p>
-      
+      <p>On push avec : <br />
+      npx prisma db push <br />
+      npx prisma migrate dev --name init</p>
     </div>
   );
 }

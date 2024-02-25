@@ -14,15 +14,34 @@ datasource db {
 }
 
 model Post {
-  id        String   @id @default(uuid())
-  createdAt DateTime @default(now())
-  title     String
-  slug      String   @unique
-  content   String   @db.Text
-  image     String?
-  published Boolean? @default(false)
-  view      Int      @default(0)
+  id         String   @id @default(uuid())
+  createdAt  DateTime @default(now())
+  title      String
+  slug       String   @unique
+  content    String   @db.Text
+  image      String?
+  published  Boolean? @default(false)
+  views      Int      @default(0)
+  nbComments Int      @default(0)
   // user
   // category
-  
+}
+
+model rpgCharacters {
+  id           String  @id @default(uuid())
+  name         String
+  surname      String?
+  image        String?
+  biopic       String?
+  pv           Int     @default(10)
+  force        Int     @default(10)
+  dex          Int     @default(10)
+  constitution Int     @default(10)
+  Intelligence Int     @default(10)
+  charisme     Int     @default(10)
+  sagesse      Int     @default(10)
+  eqAtk        String?
+  eqDef        String?
+  argent       Int     @default(0)
+  inventaire   Json?
 }
